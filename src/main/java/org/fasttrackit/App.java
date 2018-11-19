@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        FruitTrees fruitTrees = new FruitTrees();
+        fruitTrees.name = "Apple";
+        fruitTrees.color = "Red";
+        fruitTrees.age = 25;
+        fruitTrees.cost = 3;  // 3 $
     }
 }
