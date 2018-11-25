@@ -1,9 +1,9 @@
 package org.fasttrackit;
 
 public class Farmer {
-    String name;
+    String nameFa;
     String nationality;
-    double age;
+    double ageFa;
     double weight;
     double budget;    // per $
 }
