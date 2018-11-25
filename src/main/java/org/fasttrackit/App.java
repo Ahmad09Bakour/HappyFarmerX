@@ -8,12 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        Trees tree1 = new Trees();
-        tree1.age = 6;
-        SweetFr sweetFr = new SweetFr(tree1);
-        sweetFr.name = "Cherry";
-        System.out.println(sweetFr.name);
-
         Trees tree2 = new Trees();
         tree2.age = 5;
         SweetFr sweetFr1 = new SweetFr(tree2);
@@ -29,7 +23,7 @@ public class App
         sweetFr2.color = "Red";
         System.out.println(sweetFr2.name);
         double costsweetFr2 = sweetFr2.production(2);
-        System.out.println("The cost of 2 dozens of Peaches is: " + costsweetFr2 + " $");
+        System.out.println("The cost of 2 dozens of the " + sweetFr2.name + " trees is: " + costsweetFr2 + " $");
 
         Farmer farmer1 = new Farmer();
         farmer1.nameFa = "Mark";
@@ -37,5 +31,11 @@ public class App
         farmer1.nationality = "Spanish";
         sweetFr2.farmer = farmer1;
         System.out.println(sweetFr2.name + " trees will be looked after by: " + farmer1.nameFa);
+
+        OrganicMatWater orgMatter = new OrganicMatWater();
+        orgMatter.nameOrg = "Compost";
+        orgMatter.kindOrg = "Solid";
+        orgMatter.amountkg = 0.5;
+        System.out.println(farmer1.nameFa + " just added " + orgMatter.amountkg + " Kg of " + orgMatter.nameOrg + " to the trees of " + sweetFr2.name);
     }
 }
