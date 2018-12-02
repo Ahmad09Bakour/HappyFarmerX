@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class SourFr extends FruitTrees {
+public class SourFr extends Fruit {
     public SourFr(Trees trees) {
         super(trees);
     }

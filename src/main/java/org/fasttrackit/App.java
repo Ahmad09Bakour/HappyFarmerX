@@ -23,19 +23,18 @@ public class App
         sweetFr2.color = "Red";
         System.out.println(sweetFr2.name);
         double costsweetFr2 = sweetFr2.production(2);
-        System.out.println("The cost of 2 dozens of the " + sweetFr2.name + " trees is: " + costsweetFr2 + " $");
+        System.out.println("The cost of 2 dozens of the " + sweetFr2.name + " is: " + costsweetFr2 + " $");
 
         Farmer farmer1 = new Farmer();
-        farmer1.nameFa = "Mark";
-        farmer1.ageFa = 37;
-        farmer1.nationality = "Spanish";
+        farmer1.setNameFa("Mark");
+        farmer1.setAgeFa(37);
+        farmer1.setNationality("Spanish");
         sweetFr2.farmer = farmer1;
-        System.out.println(sweetFr2.name + " trees will be looked after by: " + farmer1.nameFa);
+        System.out.println(sweetFr2.name + " trees will be looked after by: " + farmer1.getNameFa());
 
-        OrganicMatWater orgMatter = new OrganicMatWater();
-        orgMatter.nameOrg = "Compost";
-        orgMatter.kindOrg = "Solid";
-        orgMatter.amountkg = 0.5;
-        System.out.println(farmer1.nameFa + " just added " + orgMatter.amountkg + " Kg of " + orgMatter.nameOrg + " to the trees of " + sweetFr2.name);
+        Nutrient nutrient = new Nutrient();
+        nutrient.setNameNu("Compost");
+        nutrient.setAmountkg(0.5);
+        System.out.println(farmer1.getNameFa() + " just added " + nutrient.getAmountkg() + " Kg of " + nutrient.getNameNu() + " to the trees of " + sweetFr2.name);
     }
 }
