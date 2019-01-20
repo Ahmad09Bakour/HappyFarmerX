@@ -1,17 +1,30 @@
 package org.fasttrackit;
 
 public class Plants {
-    String name;              // apple or orange or cherry or banana.......
-    String color;
-    Farmer farmer;
+    private String name;              // apple or orange or cherry or banana.......
+    private String color;
+    private double sweetnessLev;
 
-    double production(double cost) {
+
+
+    double production(double cost, double tastinessLev) {
         System.out.println("The cost of a dozen is 12 $");
-        return cost * 12;    //  cost per $
-
+        return cost * 12 + tastinessLev;    //  cost per $, tastiness level of the fruit, ...
     }
+    double production(double cost) {
+        System.out.println("The cost of a dozen is 12 $, Plant's sweetness is unknown!");
+        return  cost *12 + 0;     // overloading the cost method, when the plant is vegetable, then sweetness is zero.
+    }
+
     void ProductionSeason(String season){
 
+    }
+    public double getSweetnessLev() {
+        return sweetnessLev;
+    }
+
+    public void setSweetnessLev(double sweetnessLev) {
+        this.sweetnessLev = sweetnessLev;
     }
 
     public String getName() {
@@ -30,11 +43,12 @@ public class Plants {
         this.color = color;
     }
 
-    public Farmer getFarmer() {
-        return farmer;
-    }
 
-    public void setFarmer(Farmer farmer) {
-        this.farmer = farmer;
+    @Override
+    public String toString() {
+        return "Plants{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }

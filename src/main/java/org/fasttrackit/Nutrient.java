@@ -2,9 +2,15 @@ package org.fasttrackit;
 
 public class Nutrient {
     private String nameNu;
-    private double amountkg;    // amount per kg
-    double amountlr;    // amount per litre
+    private double amountKg;    // amount per kg
+    private double amountLr;    // amount per litre
+    public double expenses;
 
+    /*
+    public double getExpenses() { return expenses; }
+
+    public void setExpenses(double expenses) { this.expenses = expenses; }
+    */
     public String getNameNu() {
         return nameNu;
     }
@@ -13,20 +19,20 @@ public class Nutrient {
         this.nameNu = nameNu;
     }
 
-    public double getAmountkg() {
-        return amountkg;
+    public double getAmountKg() {
+        return amountKg;
     }
 
-    public void setAmountkg(double amountkg) {
-        this.amountkg = amountkg;
+    public void setAmountKg(double amountKg) {
+        this.amountKg = amountKg;
     }
 
-    public double getAmountlr() {
-        return amountlr;
+    public double getAmountLr() {
+        return amountLr;
     }
 
-    public void setAmountlr(double amountlr) {
-        this.amountlr = amountlr;
+    public void setAmountLr(double amountLr) {
+        this.amountLr = amountLr;
     }
 
 }
