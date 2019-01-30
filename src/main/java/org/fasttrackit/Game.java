@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Game extends Store {
     private Farmer[] farmers = new Farmer[15];
 
+
     public void addFarmers(int index) {
         Farmer farmer = new Farmer();
         Scanner scannerxx = new Scanner(System.in);
@@ -25,12 +26,20 @@ public class Game extends Store {
 
         addToAvailableFruits();
         addToAvailableVege();
-        selectProductNums();
+        getFromSeedsList();
+        getFromNutrientList();
+        getFromOrgMattList();
+        getFromDoctorList();
+
+
+        int input = selectProductNums();
+
+
         selectKindOfPlant();
         gettingKindOfSeeds();
-        gettingNutrientsAndOrgMat();
-        gettingDoctorHelp();
-        sellingPruducts();  // I want to call this method but I didn't know how
+        //gettingNutrientsAndOrgMat();
+        //gettingDoctorHelp();
+
     }
 
     private void welcomeMessage() {
@@ -41,11 +50,12 @@ public class Game extends Store {
         }
     }
 
-    private void selectProductNums() {
+    private int selectProductNums() {
         System.out.println("Please enter the number of plants that you want to cultivate...");
         Scanner scanner1 = new Scanner(System.in);
         int input1 = scanner1.nextInt();
         System.out.println("You chose: " + input1 + " Plants to cultivate..");
+        return input1;
     }
 
     private void selectKindOfPlant(){
@@ -122,7 +132,6 @@ public class Game extends Store {
         Farmer farmer = new Farmer();
         farmer.setBudget(Farmer.Amount_Of_Monay_InBudget);
         System.out.println("First you will need to buy Seeds to start cultivating!.. yaaaay ^_^");
-        addToSeedsQuality();
         chooseQualitySeeds();
     }
 
@@ -130,7 +139,7 @@ public class Game extends Store {
         System.out.println("Now you need to get some Nutrients to help your plants grow faster...");
         chooseQualityNutrients();
         System.out.println("You did amazing so far!... Now you need to get some Organic Matters to improve the quality of your plants..");
-        chooseQualityOrgMat();
+        chooseQualityNutrients();
     }
     public void gettingDoctorHelp(){
         System.out.println("WOW!!! You such an amazing farmer! You're doing so well!!" );

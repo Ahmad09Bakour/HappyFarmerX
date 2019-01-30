@@ -3,7 +3,7 @@ package org.fasttrackit;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Store extends BuyingClass {
+public class Store extends Farmer{
     public List<Fruit> availableFruits = new ArrayList<>();
     public void addToAvailableFruits(){
         Fruit fruit1 = new Fruit();

@@ -43,12 +43,12 @@ public class Plants {
         this.color = color;
     }
 
-
     @Override
     public String toString() {
         return "Plants{" +
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
+                ", sweetnessLev=" + sweetnessLev +
                 '}';
     }
 }
